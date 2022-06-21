@@ -33,69 +33,85 @@
                         <div class="table-responsive">
                             <table class='table table-striped'>
                                 <tr>
-                                    <th>Nomor Pendaftaran</th>
+                                    <th style="width: 30%" >Nomor Pendaftaran</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->no_pendf }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Nama</th>
+                                    <th style="width: 30%" >Nama</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->name }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Foto</th>
-                                    <td><img src="{{ asset('storage/'.$student->image) }}" alt="gambar_pesawat" class="img-fluid"
+                                    <th style="width: 30%" >Foto</th>
+                                    <th style="width: 1%">:</th>
+                                    <td><img src="{{ asset('storage/'.$student->image) }}" alt="foto" class="img-fluid"
                                         width="200px">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Jurusan</th>
+                                    <th style="width: 30%" >Jurusan</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->major->jurusan }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Tempat Lahir</th>
+                                    <th style="width: 30%" >Tempat Lahir</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->tmpt_lahir }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Tanggal Lahir</th>
-                                    <td>{{ $student->tgl_lahir }}</td>
+                                    <th style="width: 30%" >Tanggal Lahir</th>
+                                    <th style="width: 1%">:</th>
+                                    <td>{{ date('d M Y',strtotime($student->tgl_lahir)) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Tanggal Kadaluarsa</th>
+                                    <th style="width: 30%" >Jenis Kelamin</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->jns_kelamin }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Umur</th>
+                                    <th style="width: 30%" >Umur</th>
+                                    <th style="width: 1%">:</th>
+                                    <td>{{ $student->umur }}</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 30%" >Asal Sekolah</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->asal_sklh }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Agama</th>
-                                    <td>{{ $student->agama }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Tanggal Pembuatan</th>
+                                    <th style="width: 30%" >Alamat</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->almt }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Nama Orang Tua</th>
+                                    <th style="width: 30%" >Agama</th>
+                                    <th style="width: 1%">:</th>
+                                    <td>{{ $student->agama }}</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 30%" >Nama Orang Tua</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->nama_ortu }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Pekerjaan Orang Tua</th>
+                                    <th style="width: 30%" >Pekerjaan Orang Tua</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->pkerjaan_ortu }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Asal Sekolah</th>
-                                    <td>{{ $student->asal_sklh }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Nilai Ujian Nasional</th>
+                                    <th style="width: 30%" >Nilai Ujian Nasional</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->nilai_un }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Nilai Ujian Sekolah</th>
+                                    <th style="width: 30%" >Nilai Ujian Sekolah</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->nilai_usek }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Prestasi</th>
+                                    <th style="width: 30%" >Prestasi</th>
+                                    <th style="width: 1%">:</th>
                                     <td>{{ $student->prestasi }}</td>
                                 </tr>
                             </table>

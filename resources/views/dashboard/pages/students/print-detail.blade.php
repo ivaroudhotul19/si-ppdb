@@ -34,7 +34,6 @@
         border: 1px solid #222f3e;
         margin-bottom: 15px;
         margin-top: 15px;
-        font-size: 14px;
       }
       th, td {
         display: table-cell;
@@ -43,7 +42,6 @@
       th {
         background-color: #222f3e;
         color: white;
-        width: 35%;
         text-align: left;
       }
       .footer{
@@ -67,73 +65,89 @@
             <div class="card-content">
               <div class="table-responsive">
                 <table class='table table-striped'>
-                    <tr>
-                        <th>Nomor Pendaftaran</th>
-                        <td>{{ $student->no_pendf }}</td>
-                    </tr>
-                    <tr>
-                        <th>Nama</th>
-                        <td>{{ $student->name }}</td>
-                    </tr>
-                    <tr>
-                        <th>Foto</th>
-                        <td><img src={{ asset('storage/'.$student->image) }} alt="foto" class="img-fluid"
-                            width="300px">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jurusan</th>
-                        <td>{{ $student->major->jurusan }}</td>
-                    </tr>
-                    <tr>
-                        <th>Tempat Lahir</th>
-                        <td>{{ $student->tmpt_lahir }}</td>
-                    </tr>
-                    <tr>
-                        <th>Tanggal Lahir</th>
-                        <td>{{ $student->tgl_lahir }}</td>
-                    </tr>
-                    <tr>
-                        <th>Tanggal Kadaluarsa</th>
-                        <td>{{ $student->jns_kelamin }}</td>
-                    </tr>
-                    <tr>
-                        <th>Umur</th>
-                        <td>{{ $student->asal_sklh }}</td>
-                    </tr>
-                    <tr>
-                        <th>Agama</th>
-                        <td>{{ $student->agama }}</td>
-                    </tr>
-                    <tr>
-                        <th>Tanggal Pembuatan</th>
-                        <td>{{ $student->almt }}</td>
-                    </tr>
-                    <tr>
-                        <th>Nama Orang Tua</th>
-                        <td>{{ $student->nama_ortu }}</td>
-                    </tr>
-                    <tr>
-                        <th>Pekerjaan Orang Tua</th>
-                        <td>{{ $student->pkerjaan_ortu }}</td>
-                    </tr>
-                    <tr>
-                        <th>Asal Sekolah</th>
-                        <td>{{ $student->asal_sklh }}</td>
-                    </tr>
-                    <tr>
-                        <th>Nilai Ujian Nasional</th>
-                        <td>{{ $student->nilai_un }}</td>
-                    </tr>
-                    <tr>
-                        <th>Nilai Ujian Sekolah</th>
-                        <td>{{ $student->nilai_usek }}</td>
-                    </tr>
-                    <tr>
-                        <th>Prestasi</th>
-                        <td>{{ $student->prestasi }}</td>
-                    </tr>
-                </table>
+                  <tr>
+                      <th style="width: 30%" >Nomor Pendaftaran</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->no_pendf }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Nama</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->name }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Foto</th>
+                      <th style="width: 3%">:</th>
+                      <td><img src="{{ asset('storage/'.$student->image) }}" alt="foto" class="img-fluid"
+                          width="200px">
+                      </td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Jurusan</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->major->jurusan }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Tempat Lahir</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->tmpt_lahir }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Tanggal Lahir</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ date('d M Y',strtotime($student->tgl_lahir)) }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Jenis Kelamin</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->jns_kelamin }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Umur</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->umur }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Asal Sekolah</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->asal_sklh }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Alamat</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->almt }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Agama</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->agama }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Nama Orang Tua</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->nama_ortu }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Pekerjaan Orang Tua</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->pkerjaan_ortu }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Nilai Ujian Nasional</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->nilai_un }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Nilai Ujian Sekolah</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->nilai_usek }}</td>
+                  </tr>
+                  <tr>
+                      <th style="width: 30%" >Prestasi</th>
+                      <th style="width: 3%">:</th>
+                      <td>{{ $student->prestasi }}</td>
+                  </tr>
+              </table>
               </div>
             </div>
           </div>
