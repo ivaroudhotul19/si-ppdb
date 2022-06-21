@@ -31,7 +31,10 @@
         text-align: center
       }
       table, th, td {
-        border: 1px solid black;
+        border: 1px solid #222f3e;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 14px;
       }
       th, td {
         display: table-cell;
@@ -40,6 +43,8 @@
       th {
         background-color: #222f3e;
         color: white;
+        width: 35%;
+        text-align: left;
       }
       .footer{
         text-align: left;
