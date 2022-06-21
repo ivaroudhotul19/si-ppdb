@@ -43,7 +43,7 @@
                                 <tr>
                                     <th>Foto</th>
                                     <td><img src="{{ asset('storage/'.$student->image) }}" alt="gambar_pesawat" class="img-fluid"
-                                        width="300px">
+                                        width="200px">
                                     </td>
                                 </tr>
                                 <tr>
