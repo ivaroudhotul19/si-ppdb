@@ -170,13 +170,11 @@ class DashboardStudentsController extends Controller
     }
 
     public function print_detail(NewStudent $student) {
-        $pdf = Pdf::loadview('dashboard.pages.students.print-detail', 
-           ['student'=>$student])->setOptions(['isRemoteEnable' => true]
-        );
+        $image = Storage::get('public/'. $student->image);
+        $img_to_base64 = base64_encode($image);
+
+        $pdf = PDF::loadview('dashboard.pages.students.print-detail', compact('student', 'img_to_base64'));
         
-        return $pdf->stream();
-        // return view('dashboard.pages.students.print-detail', [
-        //     'student' => $student
-        // ]);
+        return $pdf->download('detail-siswa.pdf');
     }
 }

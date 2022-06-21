@@ -78,8 +78,8 @@
                   <tr>
                       <th style="width: 30%" >Foto</th>
                       <th style="width: 3%">:</th>
-                      <td><img src="{{ asset('storage/'.$student->image) }}" alt="foto" class="img-fluid"
-                          width="200px">
+                      <td><img src="data:image/png;base64, {{ $img_to_base64 }}" alt="foto" 
+                        class="img-fluid" width="200px">
                       </td>
                   </tr>
                   <tr>
