@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logoo.png" type="image/x-icon">
 </head>
 <body>
     @include('sweetalert::alert') 
-    <div class="container">
+    <div class="container mt-4">
         <div class="row d-flex mt-3">
             <div class="col-md-7 col-sm-12 mx-auto justify-content-center align-items-center">
                 <div class="card pt-4 mt-5">
