@@ -112,7 +112,7 @@ class DashboardMajorsController extends Controller
     public function destroy(Major $major)
     {
         Major::destroy($major->id);
-        Alert::success('Success deleted a major', 'Major has been successfully deleted');
+        Alert::success('Success deleting a major', 'Major has been successfully deleted');
         return redirect('/dashboard/majors');
     }
 

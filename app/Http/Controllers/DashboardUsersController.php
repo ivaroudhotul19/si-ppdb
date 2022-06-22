@@ -130,7 +130,7 @@ class DashboardUsersController extends Controller
     public function destroy(User $user)
     {
         User::destroy($user->id);
-        Alert::success('Success deleted a user', 'User has been successfully deleted');
+        Alert::success('Success deleting a user', 'User has been successfully deleted');
         return redirect('/dashboard/users');
     }
 

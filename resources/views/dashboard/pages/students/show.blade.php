@@ -26,8 +26,13 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title mt-3">Data Siswa {{ $student->no_pendf }} - {{ $student->name }}</h4>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+                    <a href="/download/detail-student/{{ $student->id }}" class="btn btn-secondary me-md-2">Download Report</a>
+                </div>
             </div>
+            
             <div class="card-body">
+                
                 <div class="row">
                     <div class="col-md-12 mb-2">
                         <div class="table-responsive">
@@ -115,10 +120,6 @@
                                     <td>{{ $student->prestasi }}</td>
                                 </tr>
                             </table>
-                        </div>
-                         <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-                            <a href="/dashboard/students" class="btn btn-dark me-md-2">Back</a>
-                            <a href="/download/detail-student/{{ $student->id }}" class="btn btn-dark me-md-2">Download Report</a>
                         </div>
                     </div>
                 </div>

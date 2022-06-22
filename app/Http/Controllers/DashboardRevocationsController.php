@@ -108,7 +108,7 @@ class DashboardRevocationsController extends Controller
     public function destroy(Revocation $revocation)
     {
         Revocation::destroy($revocation->id);
-        Alert::success('Success deleted a revocation', 'Revocations has been successfully deleted');
+        Alert::success('Success deleting a revocation', 'Revocations has been successfully deleted');
         return redirect('/dashboard/revocations'); 
     }
 

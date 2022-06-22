@@ -96,7 +96,7 @@ i {
 footer {
     padding: 1rem 1.5rem;
 }
-.sticky-footer{
+.sticky-footer {
     position: sticky;
     top: 100%;
 }

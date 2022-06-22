@@ -69,6 +69,8 @@
                         <th>Nama</th>
                         <th>Jurusan</th>
                         <th>Asal Sekolah</th>
+                        <th>Nilai UN</th>
+                        <th>Nilai USEK</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -78,6 +80,8 @@
                             <td>{{ $student->name }}</td>
                             <td>{{ $student->major->jurusan }}</td>
                             <td>{{ $student->asal_sklh }}</td>
+                            <td style="text-align: center">{{ $student->nilai_un }}</td>
+                            <td style="text-align: center">{{ $student->nilai_usek }}</td>
                         </tr>
                     @endforeach
                   </tbody>

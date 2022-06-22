@@ -38,6 +38,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Nomor Pendaftaran</th>
                             <th>Nama</th>
                             <th>Jurusan</th>
                             <th>Asal Sekolah</th>
@@ -48,6 +49,7 @@
                         @foreach ($students as $student)   
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $student->no_pendf }}</td>
                                 <td>{{ $student->name }}</td>
                                 <td>{{ $student->major->jurusan }}</td>
                                 <td>{{ $student->asal_sklh }}</td>

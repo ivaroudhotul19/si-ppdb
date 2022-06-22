@@ -73,7 +73,6 @@
     </section>
 </div>
 @endsection
-
 @section('alert')
 <script src="{{ asset('assets/sweetalert2.min.js') }}"></script>
 <script type="text/javascript">

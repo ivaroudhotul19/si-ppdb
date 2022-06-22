@@ -117,7 +117,7 @@ class DashboardPaymentsController extends Controller
     public function destroy(Payment $payment)
     {
         Payment::destroy($payment->id);
-        Alert::success('Success deleted a payment', 'Payment has been successfully deleted');
+        Alert::success('Success deleting a payment', 'Payment has been successfully deleted');
         return redirect('/dashboard/payments');
     }
 

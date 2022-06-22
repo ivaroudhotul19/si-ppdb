@@ -241,7 +241,7 @@
                                 </div>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
                                     <button type="reset" class="btn btn-light me-md-2">Cancel</button>
-                                    <button type="submit" class="btn btn-secondary">Create</button>
+                                    <button type="submit" class="btn btn-secondary">Save</button>
                                 </div>
                             </div>
                         </form>
@@ -255,7 +255,6 @@
     document.addEvenListner('trix-file-accept', function(e) {
         e.preventDefault();
     });
-
     function previewImage() {
         const image = document.querySelector('#image');
         const imgPreview = document.querySelector('.img-preview');

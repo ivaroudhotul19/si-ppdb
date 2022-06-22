@@ -143,7 +143,7 @@ class DashboardStudentsController extends Controller
         // buat masukin ke database
         NewStudent::where('id', $student->id)
             ->update($validatedData);
-        Alert::success('Success updating a student', 'Student has been successfully updated');
+        Alert::success('Success editing a student', 'Student has been successfully edited');
         return redirect('/dashboard/students');
     }
 
@@ -155,8 +155,11 @@ class DashboardStudentsController extends Controller
      */
     public function destroy(NewStudent $student)
     {
+        if($student->image) {
+            Storage::delete($student->image);
+        }
         NewStudent::destroy($student->id);
-        Alert::success('Success deleted a Student', 'Student has been successfully deleted');
+        Alert::success('Success deleting a Student', 'Student has been successfully deleted');
         return redirect('/dashboard/students');
     }
 

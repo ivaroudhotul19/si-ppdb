@@ -118,7 +118,7 @@ class DashboardRegistrationsController extends Controller
     public function destroy(Registration $registration)
     {
         Registration::destroy($registration->id);
-        Alert::success('Success deleted a registrations', 'Registration has been successfully deleted');
+        Alert::success('Success deleting a registrations', 'Registration has been successfully deleted');
         return redirect('/dashboard/registrations'); 
     }
 
