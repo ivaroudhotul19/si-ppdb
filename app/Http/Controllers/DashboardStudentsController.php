@@ -107,6 +107,7 @@ class DashboardStudentsController extends Controller
      */
     public function update(Request $request, NewStudent $student)
     {
+        // dd($request->no_pendf);
         $rules = [
             'major_id' => 'required',
             'name' => 'required|max:255',
@@ -126,9 +127,7 @@ class DashboardStudentsController extends Controller
         ];
 
         if($request->no_pendf != $student->no_pendf){
-            $this->validate($request, [
-                $rules['no_pendf'] = 'required|max:8|unique:new_students',
-            ]);
+            $rules['no_pendf'] = 'required|max:8|unique:new_students';
         }
         $validatedData = $request->validate($rules);
         if($request->hasFile('image')){
@@ -159,7 +158,7 @@ class DashboardStudentsController extends Controller
             Storage::delete($student->image);
         }
         NewStudent::destroy($student->id);
-        Alert::success('Success deleting a Student', 'Student has been successfully deleted');
+        Alert::success('Success deleting a student', 'Student has been successfully deleted');
         return redirect('/dashboard/students');
     }
 

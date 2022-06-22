@@ -53,7 +53,7 @@ class DashboardRegistrationsController extends Controller
         ]);
 
         Registration::create($validatedData);
-        Alert::success('Success adding a registrations', 'Registration has been successfully created');
+        Alert::success('Success adding a registration', 'Registration has been successfully created');
         return redirect('/dashboard/registrations');        
     }
 
@@ -105,7 +105,7 @@ class DashboardRegistrationsController extends Controller
 
         $validatedData = $request->validate($rules);
         Registration::where('id', $registration->id)->update($validatedData);
-        Alert::success('Success editing a registrations', 'Registration has been successfully edited');
+        Alert::success('Success editing a registration', 'Registration has been successfully edited');
         return redirect('/dashboard/registrations');       
     }
 
@@ -118,7 +118,7 @@ class DashboardRegistrationsController extends Controller
     public function destroy(Registration $registration)
     {
         Registration::destroy($registration->id);
-        Alert::success('Success deleting a registrations', 'Registration has been successfully deleted');
+        Alert::success('Success deleting a registration', 'Registration has been successfully deleted');
         return redirect('/dashboard/registrations'); 
     }
 
